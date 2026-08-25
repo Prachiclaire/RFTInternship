@@ -1,0 +1,25 @@
+{
+  "name": "student-backend-api",
+  "version": "1.0.0",
+  "description": "Day 21 - REST API Basics - Simple backend API for students (GOW AI Academy Backend Internship)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "rest-api",
+    "express",
+    "nodejs",
+    "gowaiaacademy",
+    "rftinternship"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.22.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

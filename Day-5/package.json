@@ -1,0 +1,17 @@
+{
+  "name": "api-tester-mini-system",
+  "version": "1.0.0",
+  "description": "API Tester Mini System - GOW AI Academy Day 5",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}

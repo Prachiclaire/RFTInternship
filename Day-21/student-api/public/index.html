@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Students - Backend Internship Day 21</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 16px; }
+  h1 { color: #1f3a93; }
+  table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+  th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: left; }
+  th { background: #1f3a93; color: white; }
+  button { padding: 4px 10px; cursor: pointer; }
+  #status { color: #888; font-size: 14px; }
+</style>
+</head>
+<body>
+  <h1>Students (fetched from /students API)</h1>
+  <p id="status">Loading...</p>
+  <table id="studentTable" style="display:none">
+    <thead>
+      <tr><th>ID</th><th>Name</th><th>Course</th><th>Marks</th></tr>
+    </thead>
+    <tbody id="studentBody"></tbody>
+  </table>
+
+  <script>
+    async function loadStudents() {
+      const status = document.getElementById('status');
+      try {
+        const res = await fetch('/students');
+        const json = await res.json();
+        const tbody = document.getElementById('studentBody');
+        tbody.innerHTML = '';
+        json.data.forEach((s) => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `<td>${s.id}</td><td>${s.name}</td><td>${s.course}</td><td>${s.marks ?? '-'}</td>`;
+          tbody.appendChild(tr);
+        });
+        document.getElementById('studentTable').style.display = 'table';
+        status.textContent = `Loaded ${json.count} student(s).`;
+      } catch (err) {
+        status.textContent = 'Failed to load students: ' + err.message;
+      }
+    }
+    loadStudents();
+  </script>
+</body>
+</html>

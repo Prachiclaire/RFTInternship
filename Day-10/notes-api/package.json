@@ -1,0 +1,19 @@
+{
+  "name": "notes-api",
+  "version": "1.0.0",
+  "description": "Notes API (Mini System) - Day 10 of Backend Internship at GOW AI Academy",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["notes", "crud", "api", "express", "nodejs"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

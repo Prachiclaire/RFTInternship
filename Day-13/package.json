@@ -1,0 +1,21 @@
+{
+  "name": "user-auth",
+  "version": "1.0.0",
+  "description": "User Authentication with Database - Day 13 of Backend Internship at GOW AI Academy",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["auth", "jwt", "bcrypt", "express", "nodejs"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

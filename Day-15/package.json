@@ -1,0 +1,19 @@
+{
+  "name": "search-api",
+  "version": "1.0.0",
+  "description": "Search API (Database Querying) - Day 15 of Backend Internship at GOW AI Academy",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["search", "api", "express", "nodejs", "querying", "filtering"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
